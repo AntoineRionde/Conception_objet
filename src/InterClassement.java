@@ -5,12 +5,12 @@ public class InterClassement {
     public static List<Integer> lentierInterclasser(List<Integer> liste1, List<Integer> liste2) {
         List liste_resultat = new ArrayList<Integer>();
 
-        int place1 = liste1.indexOf(0);
-        int place2 = liste2.indexOf(0);
+        int place1 = 0;
+        int place2 = 0;
 
         while ((place1 != liste1.size())  && (place2 != liste2.size())) {
-            Integer entier1 = liste1.get(place1);
-            Integer entier2 = liste2.get(place2);
+            int entier1 = (int) liste1.get(place1);
+            int entier2 = (int) liste2.get(place2);
             if (entier1 < entier2) {
                 liste_resultat.add(entier1);
                 place1 += 1; // place1 <- suc(liste1, place1)

@@ -14,9 +14,10 @@ public class MainInterClass {
             l1.add(i);
         }
 
-        for (int j = 0; j < i2 ; j++) {
-            l2.add(j);
-        }
+        l2.add(7);
+        l2.add(9);
+        l2.add(12);
+
 
         List<Integer> lResFinal = InterClassement.lentierInterclasser(l1, l2);
 
