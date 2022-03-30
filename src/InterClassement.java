@@ -10,7 +10,7 @@ public class InterClassement {
 
         while ((place1 != liste1.size())  && (place2 != liste2.size())) {
             Integer entier1 = liste1.get(place1);
-            Integer entier2 = liste1.get(place2);
+            Integer entier2 = liste2.get(place2);
             if (entier1 < entier2) {
                 liste_resultat.add(entier1);
                 place1 += 1; // place1 <- suc(liste1, place1)
