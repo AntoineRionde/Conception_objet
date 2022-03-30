@@ -20,14 +20,14 @@ public class InterClassement {
             }
         }
         if (liste1.isEmpty()) {
-            lentierCopierFinListe(liste2, place2, liste_resultat);
+            liste_resultat = lentierCopierFinListe(liste2, place2, liste_resultat);
         } else {
-            lentierCopierFinListe(liste1, place1, liste_resultat);
+            liste_resultat = lentierCopierFinListe(liste1, place1, liste_resultat);
         }
         return liste_resultat;
     }
 
-    public static void lentierCopierFinListe(List<Integer> liste_a, int place_liste_a, List<Integer> liste_b)
+    public static List lentierCopierFinListe(List<Integer> liste_a, int place_liste_a, List<Integer> liste_b)
     {
         int place_courante = place_liste_a;
         while (!(liste_a.isEmpty()))
@@ -35,5 +35,6 @@ public class InterClassement {
             liste_b.add(liste_a.get(place_courante));
             place_courante += 1; // place_courante <- suc(liste_a, place_courante)
         }
+        return liste_b;
     }
 }
