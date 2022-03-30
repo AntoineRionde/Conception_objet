@@ -8,7 +8,7 @@ public class InterClassement {
         int place1 = liste1.indexOf(0);
         int place2 = liste2.indexOf(0);
 
-        while (!(liste1.isEmpty()) && !(liste2.isEmpty())) {
+        while ((place1 != liste1.size())  && (place2 != liste2.size())) {
             Integer entier1 = liste1.get(place1);
             Integer entier2 = liste1.get(place2);
             if (entier1 < entier2) {
@@ -19,7 +19,7 @@ public class InterClassement {
                 place2 += 1; // place2 <- suc(liste2, place2)
             }
         }
-        if (liste1.isEmpty()) {
+        if (place1 == liste1.size()) {
             liste_resultat = lentierCopierFinListe(liste2, place2, liste_resultat);
         } else {
             liste_resultat = lentierCopierFinListe(liste1, place1, liste_resultat);
@@ -30,7 +30,7 @@ public class InterClassement {
     public static List lentierCopierFinListe(List<Integer> liste_a, int place_liste_a, List<Integer> liste_b)
     {
         int place_courante = place_liste_a;
-        while (!(liste_a.isEmpty()))
+        while (place_courante != liste_a.size())
         {
             liste_b.add(liste_a.get(place_courante));
             place_courante += 1; // place_courante <- suc(liste_a, place_courante)
